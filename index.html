@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Import Google Icon Font-->
+    <link href="css/materialdesignicons.min.css" media="all" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection">
+    <link type="text/css" rel="stylesheet" href="css/styles.css">
+    <!-- Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <header>
+      <h1>Matthew Fortier</h1>
+      <h4>Software Developer, Web Developer, Technology Enthusiast</h4>
+    </header>
+    <div id="slide-out" class="side-nav grey darken-4">
+      <center><img src="image/me.jpg" alt="It's supposed to be me" style="margin-top: 25px; border: 4px solid white;" class="circle">
+        <h4>Matthew Fortier</h4>
+        <h5>2 Michele Ln, Kennebunk ME, 04043</h5>
+        <h6>matthew.fortier@mymail.champlain.edu</h6>
+        <div id="github" class="chip"><img src="image/icons/github.png" alt="github logo">            Github</div>
+        <div id="linkedin" class="chip"><img src="image/icons/linkedin.png" alt="linkedin logo">            LinkedIn</div>
+      </center><br>
+      <div class="container"><a href="#about" class="waves-effect waves-light btn grey darken-3">About Me</a><a href="#portfolio" class="waves-effect waves-light btn grey darken-3">Portfolio</a><a class="waves-effect waves-light btn grey darken-3">Experience</a></div>
+    </div>
+    <div style="top: 45px; left: 60px;" class="fixed-action-btn"><a data-activates="slide-out" data-position="right" data-delay="25" data-tooltip="Click Me!" class="btn-floating tooltipped btn-large blue-grey darken-4"><i class="large material-icons">menu</i></a></div>
+    <div class="parallax-container"></div>
+    <div>
+      <div class="container">
+        <div class="row">
+          <div class="col s10 offset-s1">
+            <center>
+              <h2>About Me</h2>
+            </center>
+            <div id="about" class="card scrollspy"><img src="image/me2.jpg" alt="" style="width: 450px; height: auto; padding: 1%;" class="materialboxed"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="parallax-container"></div>
+    <div id="portfolio" class="section scrollspy white">
+      <div class="row container">
+        <center>
+          <h1>Matthew Fortier</h1>
+          <h4>Software Developer, Web Developer, Tech Enthusiast</h4>
+        </center>
+      </div>
+    </div>
+    <div class="parallax-container">
+      <div class="parallax"><img src="image/code1.jpg"></div>
+    </div>
+    <div class="section white">
+      <div class="row container">
+        <center>
+          <h1>Matthew Fortier</h1>
+          <h4>Software Developer, Web Developer, Tech Enthusiast</h4>
+        </center>
+      </div>
+    </div>
+    <div id="landing-info"></div>
+    <div class="bounce"><img src="image/down.png" style="height: 35px; width: 35px;"></div>
+    <!-- Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript">
+      $('.btn-floating').sideNav({
+        menuWidth: 500, // Default is 240
+        edge: 'left', // Choose the horizontal origin
+        closeOnClick: true // Closes side-nav on clicks, useful for Angular/Meteor
+      }
+      );
+      $(document).ready(function(){
+        $('.collapsible').collapsible({
+        accordion : false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
+        });
+      });
+      
+      $(document).ready(function(){
+        $('.parallax').parallax();
+      });
+      
+      $(document).ready(function(){
+        $('.tooltipped').tooltip({delay: 25});
+      });
+      
+      $(document).ready(function(){
+        $('.slider').slider({full_width: true});
+      });
+      
+      $(document).ready(function(){
+        $('.materialboxed').materialbox();
+      });
+      
+      var options = [
+        {selector: '.row', offset: 150, callback: function() {
+        Materialize.toast("This is our ScrollFire Demo!", 1500 );
+        } },
+        {selector: '.row', offset: 205, callback: function() {
+        Materialize.toast("Please continue scrolling!", 1500 );
+        } }
+        ];
+      Materialize.scrollFire(options);
+      
+      document.getElementById("linkedin").onclick = function () {
+        location.href = "https://www.linkedin.com/in/matthew-fortier-39534161";
+      };
+      
+      document.getElementById("github").onclick = function () {
+        location.href = "https://github.com/matther2012";
+      };
+      
+      $('.chip').hover(function() {
+        $(this).css('cursor','pointer');
+      });
+      
+      $(document).ready(function(){
+        $('.scrollspy').scrollSpy();
+      });
+      
+    </script>
+    <script src="https://cdn.jsdelivr.net/scrollreveal.js/3.1.4/scrollreveal.min.js"></script>
+  </body>
+</html>
